@@ -36,3 +36,6 @@ jobs:
 
       - name: Run echo
         run: echo "Hola"
+
+      - name: Start the application
+        run: npm start
