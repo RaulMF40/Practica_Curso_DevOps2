@@ -37,5 +37,5 @@ jobs:
       - name: Run echo
         run: echo "Hola"
 
-      - name: Start the application
-        run: npm start
+      - name: Run tests and start application
+        run: npm run test:serve
