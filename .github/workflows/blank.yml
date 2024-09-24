@@ -1,5 +1,3 @@
-# This is a basic workflow to help you get started with Actions
-
 name: CI
 
 # Controls when the workflow will run
@@ -23,7 +21,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - name: Estoy ejecuntado el Checkout
+      - name: Estoy ejecutando el Checkout
         uses: actions/checkout@v4
 
       # Runs a single command using the runners shell
@@ -39,3 +37,16 @@ jobs:
 
       - name: Run tests and start application
         run: npm run test:serve
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build # Este job depende del job de build
+
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE again for deployment
+      - name: Estoy ejecutando el Checkout en Deploy
+        uses: actions/checkout@v4
+
+      # Simplemente imprime un mensaje en la consola
+      - name: Deploy application
+        run: echo "Hola yo soy el job que despliega la API"
