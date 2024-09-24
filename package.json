@@ -1,0 +1,29 @@
+{
+  "name": "practica_curso_devops2",
+  "version": "1.0.0",
+  "description": "Este es mi segundo ejercicio Practico en este curso de DEVOPS con CODE SPACE - CRUZ ROJA MALAGA",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RaulMF40/Practica_Curso_DevOps2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RaulMF40/Practica_Curso_DevOps2/issues"
+  },
+  "homepage": "https://github.com/RaulMF40/Practica_Curso_DevOps2#readme",
+  "dependencies": {
+    "express": "^4.21.0",
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
+  },
+  "devDependencies": {
+    "@flydotio/dockerfile": "^0.5.8"
+  }
+}
