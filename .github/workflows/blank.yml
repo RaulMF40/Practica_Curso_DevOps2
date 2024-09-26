@@ -15,7 +15,7 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          cd MainService
+          cd mainService
           npm install
 
       - name: Say Hello
@@ -23,7 +23,7 @@ jobs:
 
       - name: Run Tests
         run: |
-          cd MainService
+          cd mainService
           npm run test
 
   userservice:
@@ -34,7 +34,7 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          cd UserService
+          cd userService
           npm install
 
       - name: Say Hello
@@ -42,5 +42,5 @@ jobs:
 
       - name: Run Tests
         run: |
-          cd UserService
+          cd userService
           npm run test
