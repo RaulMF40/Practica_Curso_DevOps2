@@ -44,3 +44,5 @@ jobs:
         run: |
           cd userService
           npm run test
+      - name: Echo message
+        run: echo "Hello from UserService"
