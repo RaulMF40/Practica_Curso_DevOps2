@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js",
-    "test": "echo 'MainService Tests'",
+    "test": "jest & echo 'MainService Tests'",
     "test:serve": "node src/index.js & npm test"
   },
   "repository": {
@@ -19,12 +19,12 @@
     "url": "https://github.com/RaulMF40/Practica_Curso_DevOps2/issues"
   },
   "homepage": "https://github.com/RaulMF40/Practica_Curso_DevOps2#readme",
+  "devDependencies": {
+    "@flydotio/dockerfile": "^0.5.9"
+  },
   "dependencies": {
     "express": "^4.21.0",
     "jest": "^29.7.0",
     "supertest": "^7.0.0"
-  },
-  "devDependencies": {
-    "@flydotio/dockerfile": "^0.5.8"
   }
 }
