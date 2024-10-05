@@ -1,4 +1,4 @@
-echo "Este es un cambio tonto para verificar el despliegue" >> README.md
+echo "actualizando api token" >> README.md
 
 PRACTICA 3.
 
