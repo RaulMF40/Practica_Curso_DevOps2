@@ -1,0 +1,37 @@
+name: Deploy SUPERAPI to Fly.io
+
+# Ejecutar solo cuando haya cambios en la rama CICD
+on:
+  push:
+    branches:
+      - CICD
+
+jobs:
+  deploy:
+    name: Deploy app
+    runs-on: ubuntu-latest
+
+    concurrency: deploy-group # Asegurar que solo una acción se ejecute a la vez
+
+    steps:
+      # Paso 1: Checkout del código
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Paso 2: Instalar Flyctl
+      - name: Setup Flyctl
+        uses: superfly/flyctl-actions/setup-flyctl@master
+
+      # Paso 3: Instalar dependencias
+      - name: Install dependencies
+        run: npm install
+
+      # Paso 4: Ejecutar tests
+      - name: Run tests
+        run: npm test
+
+      # Paso 5: Desplegar la aplicación en Fly.io
+      - name: Deploy to Fly.io
+        run: flyctl deploy --remote-only
+        env:
+          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
